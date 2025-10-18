@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <header>
+      <main>
+        <div class="container">
+          <h1>💱 Conversor de Moedas</h1>
+          <p class="subtitle">Cotação em tempo real</p>
+        </div>
+
+        <div class="input-group">
+          <label for="valor">Valor</label>
+          <input
+            type="number"
+            id="valor"
+            placeholder="Digite o valor"
+            value="100"
+            min="0"
+            step=""
+          />
+        </div>
+
+        <div class="currency-row">
+          <div class="input-group">
+            <label for="moedaOrigem">De</label>
+            <select id="moedaOrigem">
+              <option value="BRL">BRL - Real</option>
+              <option value="USD">USD - Dólar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - Libra</option>
+              <option value="JPY">JPY - Yene</option>
+              <option value="ARS">ARS - Peso Argentino</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="moedaDestino">Para</label>
+          <select id="moedaDestino">
+            <option value="BRL">BRL - Real</option>
+            <option value="USD">USD - Dólar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - Libra</option>
+            <option value="JPY">JPY - Libra</option>
+            <option value="ARS">ARS - Peso Argentino</option>
+          </select>
+        </div>
+
+        <button class="swap-btn" id="trocar" title="Trocar moedas">⇄</button>
+
+        <button id="converter">Converter</button>
+
+        <div class="resultado-card" id="resultado">
+          <div class="loading" id="loading">Convertendo...</div>
+          <div
+            class="resultado-content"
+            id="resultadoContent"
+            style="display: none"
+          ></div>
+          <div class="resultado-label">Você recebe</div>
+          <div class="resultado-valor" id="valorConvertido"></div>
+          <div class="resultado-info" id="infoConversao"></div>
+          <div class="taxa-info" id="taxaInfo"></div>
+        </div>
+      </main>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>
